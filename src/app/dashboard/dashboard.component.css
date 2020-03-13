@@ -1,0 +1,30 @@
+@media only screen and (min-width: 992px) {
+    .dashboard {
+        margin-left: 10%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        padding: 20px;
+        background-color: black;
+    }
+}
+
+@media only screen and (max-width: 600) {
+    .dashboard {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        padding: 20px;
+    }
+}
+
+.Box1{
+    width: 250px;
+    height: 250px;
+    background-color: blanchedalmond;
+}
+
+.Box2{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+}
+

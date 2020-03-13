@@ -1,0 +1,41 @@
+
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid;
+    border-color: rgb(1, 43, 114, 0.7);
+    padding: 5px;
+    height: 20px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+}
+
+.wrap {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 992px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        padding: 30px 500px 30px 500px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+    }
+}

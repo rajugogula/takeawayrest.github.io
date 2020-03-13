@@ -1,0 +1,154 @@
+<div class="reserveContainer">
+    <div class="itemOne">
+        <!-- soups-->
+        <div
+            class="starters"
+         (click)="collapsableTab(1)"
+          [ngClass]="toggleFlag && (tabIndex === 1) ? 'tabActive' : 'tabInActive'"
+         >
+             <span>Soups</span>
+             <span><i [ngClass]="toggleFlag && (tabIndex === 1) ? 'downA' : 'rightA'"></i></span>
+        </div>
+     <div id="soup" class="hideElement" *ngIf="toggleFlag && (tabIndex === 1)">
+        <table class="tableCss">
+            <ng-container *ngFor="let row of items.soups">
+                <tr>
+                    <td>{{row.name}}</td>
+                    <td>RS. {{row.cost}}</td>
+                    <td>
+                        <button class="addItem" (click)="addOrder(row)">Add</button>
+                        <button class="deleteItem" (click)="deleteItem(row)">Remove</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </table>
+      </div>
+     <!--soft drinks-->
+      <div class="starters" (click)="collapsableTab(2)" 
+         [ngClass]="toggleFlag && (tabIndex === 2) ? 'tabActive' : 'tabInActive'">
+         <span>Soft Drinks</span>
+         <span ><i [ngClass]="toggleFlag && (tabIndex === 2) ? 'downA' : 'rightA'"></i></span>
+     </div>
+
+     <div id="soup" class="hideElement" *ngIf="toggleFlag && (tabIndex === 2) ">
+          <table class="tableCss">
+                <ng-container *ngFor="let row of items.drinks">
+                    <tr>
+                          <td>{{row.name}}</td>
+                         <td>Rs. {{row.cost}}</td>
+                         <td>
+                           <button class="addItem" (click)="addOrder(row)">Add</button>
+                           <button class="deleteItem" (click)="deleteItem(row)">Remove</button>
+                      </td>
+                   </tr>
+                 </ng-container>
+          </table>
+      </div>
+      <!--starters-->
+      <div class="starters" (click)="collapsableTab(3)" [ngClass]="toggleFlag && (tabIndex === 3) ? 'tabActive' : 'tabInActive'">
+         <span> Starters</span>
+         <span><i [ngClass]="toggleFlag && (tabIndex === 3) ? 'downA' : 'rightA'"></i></span>
+      </div>
+
+        <div id="soup" class="hideElement" *ngIf="toggleFlag && (tabIndex === 3) ">
+            <table class="tableCss">
+                <ng-container *ngFor="let row of items.starters">
+                    <tr>
+                        <td>{{row.name}}</td>
+                        <td>Rs. {{row.cost}}</td>
+                        <td>
+                            <button class="addItem" (click)="addOrder(row)">Add</button>
+                            <button class="deleteItem" (click)="deleteItem(row)">Remove</button>
+                        </td>
+                    </tr>
+                </ng-container>
+            </table>
+    
+        </div>
+        <!--rotis-->
+        
+      <div class="starters" (click)="collapsableTab(4)" [ngClass]="toggleFlag && (tabIndex === 4) ? 'tabActive' : 'tabInActive'">
+        <span> rotis</span>
+        <span><i [ngClass]="toggleFlag && (tabIndex === 4) ? 'downA' : 'rightA'"></i></span>
+     </div>
+
+       <div id="soup" class="hideElement" *ngIf="toggleFlag && (tabIndex === 4) ">
+           <table class="tableCss">
+               <ng-container *ngFor="let row of items.rotis">
+                   <tr>
+                       <td>{{row.name}}</td>
+                       <td>Rs. {{row.cost}}</td>
+                       <td>
+                           <button class="addItem" (click)="addOrder(row)">Add</button>
+                           <button class="deleteItem" (click)="deleteItem(row)">Remove</button>
+                       </td>
+                   </tr>
+               </ng-container>
+           </table>
+      </div>
+
+      <!--Curries-->
+      <div class="starters" (click)="collapsableTab(5)" [ngClass]="toggleFlag && (tabIndex === 5) ? 'tabActive' : 'tabInActive'">
+        <span> Curries</span>
+        <span><i [ngClass]="toggleFlag && (tabIndex === 5) ? 'downA' : 'rightA'"></i></span>
+     </div>
+
+       <div id="soup" class="hideElement" *ngIf="toggleFlag && (tabIndex === 5) ">
+           <table class="tableCss">
+               <ng-container *ngFor="let row of items.curries">
+                   <tr>
+                       <td>{{row.name}}</td>
+                       <td>Rs. {{row.cost}}</td>
+                       <td>
+                           <button class="addItem" (click)="addOrder(row)">Add</button>
+                           <button class="deleteItem" (click)="deleteItem(row)">Remove</button>
+                       </td>
+                   </tr>
+               </ng-container>
+           </table>
+      </div>
+        <!--Biryanis-->
+      <div class="starters" (click)="collapsableTab(6)" [ngClass]="toggleFlag && (tabIndex === 6) ? 'tabActive' : 'tabInActive'">
+        <span> Biryanis</span>
+        <span><i [ngClass]="toggleFlag && (tabIndex === 6) ? 'downA' : 'rightA'"></i></span>
+     </div>
+
+       <div id="soup" class="hideElement" *ngIf="toggleFlag && (tabIndex === 6) ">
+           <table class="tableCss">
+               <ng-container *ngFor="let row of items.biryanis">
+                   <tr>
+                       <td>{{row.name}}</td>
+                       <td>Rs. {{row.cost}}</td>
+                       <td>
+                           <button class="addItem" (click)="addOrder(row)">Add</button>
+                           <button class="deleteItem" (click)="deleteItem(row)">Remove</button>
+                       </td>
+                   </tr>
+               </ng-container>
+           </table>
+       </div>
+       
+    </div>
+    <!--Order summery-->
+    <div class="itemTwo">
+        <div class="orderHeader" >Order Summery Table No: {{tableNumber}}</div>
+        <div class="marginCSS">
+            <table class="tableCss">
+                <ng-container *ngFor=" let order of orderSummary">
+                    <tr>
+                        <td>{{order.name}}</td>
+                        <td>Rs. {{order.cost}} <span *ngIf="order.count !== 0"> X ({{order.count}})</span></td>
+                    </tr>
+                </ng-container>
+                <tr class="totalCSS">
+                    <td *ngIf="totalCost !== 0 ">Total</td>
+                    <td *ngIf="totalCost !== 0 ">Rs. {{totalCost}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="order">
+    <button class="deleteBtn" (click)="cancelOrder()"> Cancel Order</button>
+    <button class="orderBtn" (click)="addOrderToTable()"> Add Order</button>
+</div>

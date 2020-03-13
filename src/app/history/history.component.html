@@ -1,0 +1,28 @@
+<div class="history">
+    <div class="headerH">Booking History</div>
+    <div class="overflowCSS">
+        <table class="tableHistory">
+            <tr>
+                <th>Table</th>
+                <th>Date</th>
+                <th>ReservedTime</th>
+                <th>Vacated Time</th>
+                <th>Cost</th>
+            </tr>
+            <ng-container *ngFor="let row of historyData">
+                <tr>
+                    <td>No. {{row.tableNumber}}</td>
+                    <td>{{row.date}}</td>
+                    <td>{{row.bookedTime}}</td>
+                    <td>{{row.vacatedTime}}</td>
+                    <td>Rs. {{row.cost}}</td>
+                </tr>
+            </ng-container>
+        </table>
+    </div>
+    <div class="totalCSS">
+        <span class="marginCSS" *ngIf="totalCost !== 0"> Total:
+            <label > Rs. {{totalCost}}</label>
+        </span>
+    </div>
+</div>

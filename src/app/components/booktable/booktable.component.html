@@ -1,0 +1,55 @@
+<div class="booktableContainer">
+    <div class="filter">
+        <span *ngFor="let x of filterTables" let first = first;>
+            <input type="radio" class="radios" name="tableFilter" [(ngModel)]="filterargs" [value]
+            ="x">
+            <label class="marginLabel">{{x.name}}</label>
+        </span>
+    </div>
+    <div class="tableCount">
+        <span>Total: {{totalTables}}</span>
+        <span class="booked">Booked: {{booked}}</span>
+        <span class="available">Available: {{available}}</span>
+    </div>
+
+    <div class="centered">
+        <section class="cards">
+            <article class="card" *ngFor="let table of tableData | tableDataFilter:filterargs">
+                <div class="tableRow">
+                    <span class="tableNumber">{{table.number}}</span>
+                    <span
+                     [ngClass]="table.status ? 'tableStatusReserved' : 'tableStatusNR'"></span>
+                </div>
+                    <div class="tableRow">seat: {{table.seat}}</div>
+                    <div class="tableRow" *ngIf="table.totalCost !== 0">
+                        Total Cost: Rs. {{table.totalCost}}
+                    </div>
+                    <div class="tableAction">
+                        <button
+                        class="reserve"
+                        routerLink="/reserve"
+                        (click)="reserveTable(table.number)"
+                        *ngIf="!table.status"
+                        >
+                    Reserve
+                </button>
+                <button 
+                class="resetOrder"
+                *ngIf="table.status"
+                (click)="resetTable(table.number)"
+                >
+                Reset
+            </button>
+            <button
+            class="editOrder"
+            routerLink="/reserve"
+            *ngIf="table.status"
+            (click)="reserveTable(table.number)"
+            >
+            Edit Order
+        </button>
+                    </div>
+            </article>
+        </section>
+    </div>
+</div>

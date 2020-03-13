@@ -1,0 +1,227 @@
+@media only screen and (min-width: 992px) {
+    .reserveContainer {
+        margin-left: 10%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .reserveContainer {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.starters {
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabActive {
+    background-color: rgb(1, 43, 114);
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.tabInActive {
+    background-color: rgb(1, 43, 114);
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+
+.orderBtn { 
+    background-color: rgb(1, 43, 114);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    letter-spacing: normal;
+    -webkit-appearance: none;
+    font-size: 16px;
+    font-style: inherit;
+    text-align: center;
+    border-radius: 3px;
+    outline: none;
+    height: 40px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.deleteBtn { 
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    color: red;
+    display: inline-block;
+    letter-spacing: normal;
+    -webkit-appearance: none;
+    font-size: 16px;
+    font-style: inherit;
+    text-align: center;
+    border-radius: 3px;
+    outline: none;
+    height: 40px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.content {
+     display: flex;
+     margin: 8px 0px 8px 0px;
+}
+
+.space {
+    margin-right: 8px;
+}
+
+.tableCss {
+    width: 100%;
+}
+
+.tableCss>tr>td {
+    border-bottom: solid 1px;
+    padding: 8px;
+    border-color: rgb(221, 222,231);
+}
+
+@media only screen and (min-width: 992px) {
+    .addItem {
+        background-color: rgb(1, 43, 114);
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        -webkit-appearance: none;
+        font-size: 16px;
+        font-style: inherit;
+        text-align: center;
+        border-radius: 3px;
+        outline: none;
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .addItem {
+        background-color: rgb(1, 43, 114);
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        -webkit-appearance: none;
+        font-size: 12px;
+        font-style: inherit;
+        text-align: center;
+        border-radius: 3px;
+        outline: none;
+        margin-bottom: 4px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .order {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .order {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .deleteItem {
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        color: red;
+        -webkit-appearance: none;
+        font-size: 16px;
+        font-style: inherit;
+        text-align: center;
+        border-radius: 3px;
+        outline: none;
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .deleteItem {
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        color: red;
+        -webkit-appearance: none;
+        font-size: 16px;
+        font-style: inherit;
+        text-align: center;
+        border-radius: 3px;
+        outline: none;
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (min-width: 992px)  {
+    .itemOne {
+        flex-grow: 2;
+        margin-right: 48px;
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    .itemOne {
+        flex-grow: 2;
+    }
+}
+
+
+    .itemTwo {
+        flex-grow: 2;
+    }
+    
+    .marginCss {
+        margin: 10%;
+    }
+    
+    .orderHeader {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 10px;
+    }
+
+    .totlaCSS {
+        background-color: rgb(221, 227, 231);
+    }
+
+    i {
+        border: solid white;
+        border-width: 0px 3px 3px 0px;
+        display: inline-block;
+        padding: 3px;
+    }
+
+    .rightA {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    .downA {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+
+

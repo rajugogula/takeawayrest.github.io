@@ -1,0 +1,111 @@
+
+
+@media only screen and ( min-width: 992px) {
+    .history {
+        margin-left: 10%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .history {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        padding: 20px;
+    }
+}
+
+.tableHistory {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableHistory td, .tableHistory th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tableHistory tr:nth-child(even){background-color: #f2f2f2;}
+
+.tableHistory tr:hover {background-color: #ddd;}
+
+.tableHistory th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: black;
+}
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+    .headerH {
+        margin: 16px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .headerH {
+        margin: 16px;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .overflowCSS {
+        overflow: auto;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .totalCSS {
+        background-color: rgb(1, 43,114);
+        color: white;
+        padding: 12px;
+        text-align: center;
+        margin-top: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .totalCSS {
+        background-color: rgb(1, 43,114);
+        color: white;
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .marginCSS{
+        margin-right: 24px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .marginCSS{
+        margin-right: 24px;
+        font-size: 24px;
+        font-weight: 600;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.labelCSS{
+    color: red;
+}
